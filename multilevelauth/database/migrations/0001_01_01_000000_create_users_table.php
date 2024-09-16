@@ -19,7 +19,7 @@ return new class extends Migration
             $table->string('street');
             $table->string('city');
             $table->string('state');
-            $table->integer('contactNum');
+            $table->string('contactNum');
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->rememberToken();

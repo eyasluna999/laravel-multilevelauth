@@ -24,7 +24,7 @@ class RegistrationTest extends TestCase
             'contactNum' => '0922356789',
             'street' => '123 Street',
             'city' => 'BGC',
-            'state' => 'Zimbabwe',
+            'state' => 'Philippines',
             'password' => 'password',
             'password_confirmation' => 'password',
         ]);

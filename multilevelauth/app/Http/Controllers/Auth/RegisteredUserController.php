@@ -22,6 +22,11 @@ class RegisteredUserController extends Controller
         return view('auth.register');
     }
 
+
+    public function index(){
+            return view ('admin/dashboard');
+    }
+
     /**
      * Handle an incoming registration request.
      *
@@ -36,7 +41,7 @@ class RegisteredUserController extends Controller
             'street' => ['required','string','max:75'],
             'city' => ['required','string','max:75'],
             'state' => ['required','string','max:75'],
-            'contactNum' => ['required'],
+            'contactNum' => ['required', 'string'],
         ]);
 
         $user = User::create([

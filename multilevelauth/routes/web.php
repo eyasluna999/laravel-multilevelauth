@@ -21,3 +21,14 @@ Route::middleware('auth')->group(function () {
 require __DIR__.'/auth.php';
 
 route::get('admin/dashboard',[HomeController::class,'index'])-> middleware(['auth','admin']);
+
+
+
+Route::middleware(['auth', 'admin'])->group(function () {
+    Route::get('/admin/dashboard', [HomeController::class, 'view_users'])->name('admin.dashboard');
+    route::get('/view_users',[HomeController::class,'view_users']);
+    route::get('admin/edit_users/{id}',[HomeController::class,'edit_users']);
+    route::post('admin/update_users/{id}',[HomeController::class,'update_users']);
+    route::get('admin/delete_users/{id}',[HomeController::class,'delete_users']);
+
+});

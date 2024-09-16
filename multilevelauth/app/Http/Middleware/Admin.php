@@ -17,8 +17,8 @@ class Admin
     public function handle(Request $request, Closure $next): Response
     {
 
+        //validation whether user is admin or not, if not admin will be redirected back to user dashboard
         if(Auth::user()->usertype != 'admin'){
-
             return redirect('dashboard');
         }
 
