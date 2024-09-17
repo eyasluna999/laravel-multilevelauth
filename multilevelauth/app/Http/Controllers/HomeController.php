@@ -40,6 +40,7 @@ class HomeController extends Controller
         $users->contactNum = $request -> contactNum;
 
 
+
         $users->save();
         return redirect('view_users');
     }

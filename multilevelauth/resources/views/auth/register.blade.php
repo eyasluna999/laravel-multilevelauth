@@ -38,7 +38,7 @@
 
         <!-- State -->
         <div class="mt-4">
-            <x-input-label for="state" :value="__('State')" />
+            <x-input-label for="state" :value="__('Region')" />
             <x-text-input id="state" class="block mt-1 w-full" type="text" name="state" :value="old('state')" required autocomplete="state" />
             <x-input-error :messages="$errors->get('state')" class="mt-2" />
         </div>
